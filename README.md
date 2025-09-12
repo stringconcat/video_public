@@ -1,2 +1,3 @@
+## Материалы к видороликам
 
-Материалы к [видеоролику про валидацию](https://youtu.be/7h9ZFF2p1EY)
+- Видео: [Валидация.](https://youtu.be/7h9ZFF2p1EY) Исходный код: [validation](/validation/) 
