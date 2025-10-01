@@ -1,0 +1,3 @@
+package stringconcat
+
+interface ValueObject
