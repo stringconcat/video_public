@@ -1,6 +1,7 @@
 package stringconcat
 
 import arrow.core.Either
+import arrow.core.getOrElse
 import arrow.core.left
 import arrow.core.right
 import java.math.BigDecimal
@@ -13,6 +14,17 @@ data class ItemCount internal constructor(private val itemCount: BigDecimal) : V
 
     operator fun plus(other: ItemCount) =
         ItemCount(itemCount + other.itemCount)
+
+    operator fun div(count: Count): ItemCount {
+        val ic = this.itemCount / count.toIntValue().toBigDecimal()
+        if (ic < MIN_VALUE) {
+            return min()
+        } else {
+            val targetIc = ic.setScale(SCALE)
+            return from(targetIc)
+                .getOrElse { error("Cannot create ItemCount from $targetIc") }
+        }
+    }
 
     operator fun minus(other: ItemCount): Either<ResultNotPositive, ItemCount> {
         val result = itemCount - other.itemCount
