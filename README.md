@@ -2,3 +2,4 @@
 
 - Видео: [Валидация](https://youtu.be/7h9ZFF2p1EY) Исходный код: [validation](/validation/) 
 - Видео: [Value objects](https://youtu.be/) Исходный код: [Value objects](/value_object/) 
+- Видео [NullPointerException](https://youtu.be/9526qqIsFkI) Исходный код: [NPE](/npe/)
